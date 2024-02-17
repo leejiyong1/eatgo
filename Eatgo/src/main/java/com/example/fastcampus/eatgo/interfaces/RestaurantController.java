@@ -2,6 +2,7 @@ package com.example.fastcampus.eatgo.interfaces;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,8 +13,8 @@ import com.example.fastcampus.eatgo.domain.RestaurantRepository;
 @RestController
 public class RestaurantController {
 	
-
-	private RestaurantRepository Repository = new RestaurantRepository();
+	@Autowired
+	private RestaurantRepository Repository;
 
 	@GetMapping("/restaurants")
 	public List<Restaurant> list() {
