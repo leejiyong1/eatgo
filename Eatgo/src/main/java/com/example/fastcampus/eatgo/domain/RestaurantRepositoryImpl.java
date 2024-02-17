@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 public class RestaurantRepositoryImpl implements RestaurantRepository{
 	private List<Restaurant> restaurants = new ArrayList<Restaurant>();
 	
+	//생성자
 	public RestaurantRepositoryImpl() {
 		restaurants.add(new Restaurant(1004L,"Bob zip", "Seoul"));
 		restaurants.add(new Restaurant(2020L,"Cyber Food", "Seoul"));
